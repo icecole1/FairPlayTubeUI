@@ -1,5 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    @Body
+    <Header />
+    <div>
+        <div>
+            <SideBarMenu />
+        </div>
+        <div>
+            @Body
+        </div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
+    </div>
+    @*<Footer />*@
 </div>
