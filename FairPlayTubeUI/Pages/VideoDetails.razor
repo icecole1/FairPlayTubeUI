@@ -1,0 +1,73 @@
+﻿@page "/watch/{Id:int}"
+
+
+<main class="main" id="main">
+    <PageTitleVideo Title="Watch" />
+    <section class="section">
+        <WatchVideo Name="@Id.ToString()" />
+
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <!--Left items-->
+                            <div class="col-lg-10">
+                                <a class="p-2">
+                                    <i class="bi bi-coin"></i>
+                                </a>
+                                <a class="p-2">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                                <a class="p-2">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div><!--end left items-->
+                            <!--right items-->
+                            <div class="col-lg-2">
+                                <a class="p-2">
+                                    <i class="bi bi-heart"></i>
+                                </a>
+                                <a class="p-2">
+                                    <i class="bi bi-share-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+
+                        <!-- Slides only carousel -->
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/slides-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/slides-2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/slides-3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div><!-- End Slides only carousel-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+    </section>
+</main>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override void OnParametersSet()
+    {
+
+    }
+}
