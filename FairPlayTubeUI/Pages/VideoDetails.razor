@@ -1,0 +1,80 @@
+﻿@page "/watch/{Id:int}"
+
+
+<main class="main" id="main">
+    <PageTitleVideo Title="Watch" />
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <!--Left items-->
+                            <div class="col-lg-10">
+                                <a class="p-2" title="Monetize">
+                                    <i class="bi bi-coin"></i>
+                                </a>
+                                <a class="p-2" title="Watch it on YouTube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                                <a class="p-2" title="Tweet the video">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div><!--end left items-->
+                            <!--right items-->
+                            <div class="col-lg-2">
+                                <a class="p-2" title="like the video">
+                                    <i class="bi bi-heart"></i>
+                                </a>
+                                <a class="p-2" title="share the video among your freinds.">
+                                    <i class="bi bi-share-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Slides only carousel -->
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video controls poster="assets/img/coding-man.jpg" class="d-block w-100" alt="..." title="Video"></video>
+                                </div>
+                            </div>
+                        </div><!-- End Slides only carousel-->
+                        <div class="row">
+                            <div>
+                                <h6 class="pt-3 duration-text">Duration: 00:05:30</h6>
+                                <hr />
+                                <WatchVideo Name="@Id.ToString()" />
+                                <h6>
+                                    <span class="autor">John Doe</span><br />
+                                    <small class="text-primary"><i class="bi bi-currency-dollar"></i> <span> 0.00</span></small>
+                                </h6>
+                            </div>
+                            <div>
+                                <hr />
+                                <h6><i>Details</i></h6>
+                                <p class="text-card">
+                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+    </section>
+</main>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override void OnParametersSet()
+    {
+
+    }
+}

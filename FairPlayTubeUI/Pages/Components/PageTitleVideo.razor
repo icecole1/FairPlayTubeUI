@@ -1,0 +1,15 @@
+﻿<div class="pagetitle">
+    <h1>@Title</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">@Title</li>
+            @*<li class="breadcrumb-item active">Cards</li>*@
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+}
