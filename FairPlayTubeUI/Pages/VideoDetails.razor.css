@@ -1,0 +1,12 @@
+﻿hr {
+    background-color: grey;
+    border: 0.3px;
+}
+
+.duration-text{
+    margin-bottom:-10px;
+}
+
+.autor {
+    font-weight: 500;
+}
